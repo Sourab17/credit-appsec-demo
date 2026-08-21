@@ -55,6 +55,10 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+<<<<<<< HEAD
+=======
+			<version>1.18.34</version>
+>>>>>>> feature/Day2
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -72,6 +76,14 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
+		<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-text</artifactId>
+    <version>1.9</version>
+</dependency>
+>>>>>>> feature/Day2
 	</dependencies>
 
 	<build>
@@ -103,6 +115,10 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
+<<<<<<< HEAD
+=======
+									<version>1.18.34</version>
+>>>>>>> feature/Day2
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
@@ -118,6 +134,10 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
+<<<<<<< HEAD
+=======
+									<version>1.18.34</version>
+>>>>>>> feature/Day2
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
