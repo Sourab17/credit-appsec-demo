@@ -109,10 +109,7 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
-<<<<<<< HEAD
-=======
 									<version>1.18.34</version>
->>>>>>> feature/Day2
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
@@ -128,10 +125,7 @@
 								<path>
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
-<<<<<<< HEAD
-=======
 									<version>1.18.34</version>
->>>>>>> feature/Day2
 								</path>
 							</annotationProcessorPaths>
 						</configuration>
