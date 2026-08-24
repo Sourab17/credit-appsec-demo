@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           java-version: 17
-          distributuion: 'temurin'
+          distribution: 'temurin'
       - run : ./mvnw -B verify
       - name: semgrep
         uses: semgrep/semgrep-action@v1
