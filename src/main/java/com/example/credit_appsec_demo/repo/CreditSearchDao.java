@@ -14,14 +14,14 @@ public class CreditSearchDao {
 
     // VULNERABILITY #1: raw string concatenation into SQL = SQL injection
     public List<CreditApplication> search(String name) {
-        String sql = "SELECT * FROM credit_application WHERE applicant_name LIKE '%" + name + "%'";
-        return jdbcTemplate.query(sql, (rs, rowNum) -> {
-            CreditApplication c = new CreditApplication();
-            c.setId(rs.getLong("id"));
-            c.setApplicantName(rs.getString("applicant_name"));
-            c.setRequestedAmount(rs.getDouble("requested_amount"));
-            c.setNotes(rs.getString("notes"));
-            return c;
-        });
-    }
+    String sql = "SELECT * FROM credit_application WHERE applicant_name LIKE ?";
+    return jdbcTemplate.query(sql, new Object[]{"%" + name + "%"}, (rs, rowNum) -> {
+        CreditApplication c = new CreditApplication();
+        c.setId(rs.getLong("id"));
+        c.setApplicantName(rs.getString("applicant_name"));
+        c.setRequestedAmount(rs.getDouble("requested_amount"));
+        c.setNotes(rs.getString("notes"));
+        return c;
+    });
+}
 }
