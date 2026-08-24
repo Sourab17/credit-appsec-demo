@@ -1,0 +1,18 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distributuion: 'temurin'
+      - run : ./mvnw -B verify
+      - name: semgrep
+        uses: semgrep/semgrep-action@v1
+        with:
+          config: p/owasp-top-ten p/java p/secrets
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
