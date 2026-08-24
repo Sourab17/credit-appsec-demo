@@ -9,6 +9,8 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin'
+      - name: maven-executable
+        run: chmod +x mvnw
       - run : ./mvnw -B verify
       - name: semgrep
         uses: semgrep/semgrep-action@v1
