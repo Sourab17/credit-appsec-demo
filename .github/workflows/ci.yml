@@ -15,6 +15,6 @@ jobs:
       - name: Semgrep
         run: |
           pip install semgrep
-          semgrep scan --config p/owasp-top-ten --config p/java --config p/secrets
+          semgrep scan --config p/owasp-top-ten --config p/java --config p/secrets --error
       - name: Gitleaks
         uses: gitleaks/gitleaks-action@v2
