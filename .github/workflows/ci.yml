@@ -18,6 +18,8 @@ jobs:
           semgrep scan --config p/owasp-top-ten --config p/java --config p/secrets  
       - name: Gitleaks
         uses: gitleaks/gitleaks-action@v2
+      - run: ./mvnw -B package -DskipTests
+      - run: docker build -t credit-appsec-demo .
       - name: trivy
         uses: aquasecurity/trivy-action@master
         with:
