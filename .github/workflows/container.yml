@@ -10,7 +10,7 @@ jobs:
      - uses: actions/checkout@v4
      - uses: actions/setup-java@v4
        with: 
-        jave-version: 17
+        java-version: 17
         distribution: 'temurin'
      - run: chmod +x mvnw
      - run: ./mvnw -B package -DskipTests

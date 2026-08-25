@@ -29,6 +29,8 @@ jobs:
         if: always()
       - name: OWASP Dependency-Check
         uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: /opt/jdk
         with:
           project: 'credit-appsec-demo'
           path: '.'
