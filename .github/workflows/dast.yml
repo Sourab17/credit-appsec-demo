@@ -25,6 +25,12 @@ jobs:
       - name: Wait for app to be ready
         run: sleep 20
 
+      - name: Seed test data
+        run: |
+          curl -X POST http://localhost:8080/applications \
+            -H "Content-Type: application/json" \
+            -d '{"applicantName":"Jane Doe","requestedAmount":5000,"notes":"seed for DAST"}'
+
       - name: OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.12.0
         with:
